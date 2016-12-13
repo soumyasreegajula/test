@@ -1,0 +1,129 @@
+<head>
+    <style>
+        .imgSize {
+            max-width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">B2B-Ecommerce</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+
+                <li>
+                    <a href="#/loginBuyer">Login</a>
+                </li>
+                <li>
+
+                    <a ng-click="buyerModel.updateBuyer(buyerModel.buyer)"  class="glyphicon glyphicon-ok tick inherit" style="text-decoration: none;"></a>
+
+
+
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+
+</nav>
+
+
+
+        <div class="container">
+
+            <div ng-show="buyerModel.error" class="alert alert-danger" role="alert">
+                {{buyerModel.error}}
+            </div>
+
+
+        <br>
+            <form>
+                <div class="form-group">
+                    <label for="username">Buyername</label>
+                    <input ng-model="buyerModel.buyer.username" class="form-control" type="text"  id="username" placeholder="Soumya Sree">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+
+                    <input ng-model="buyerModel.buyer.email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Soumya@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="firstName">FirstName</label>
+                    <input ng-model="buyerModel.buyer.firstName" type="text" class="form-control" id="firstName" placeholder="Soumya Sree">
+                </div>
+
+                <div class="form-group">
+
+                    <label for="lastname">LastName</label>
+                    <input ng-model="buyerModel.buyer.lastName" type="text" class="form-control" id="lastName" placeholder="Gajula">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input ng-model="buyerModel.buyer.phone"
+                           type="text"
+                           class="form-control"
+                           id="phone"
+                           placeholder="XXX-XXX-XXXX">
+                </div>
+
+
+                <a ng-click="buyerModel.deleteBuyer()" href="#/loginBuyer" class="btn btn-danger btn-block">Cancel Account</a>
+                <a class="btn btn-block btn-danger"
+                   ng-click="buyerModel.logoutBuyer()">Logout</a>
+
+            </form>
+        </div>
+
+
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <p class="navbar-text pull-right" style="margin-right: 10px">
+                <a href="#/buyer/{{buyerModel.buyer._id}}" class="glyphicon glyphicon-buyer inherit" style="text-decoration: none;"></a>
+            </p>
+        </nav>
+
+
+
+<nav class="navbar  navbar-fixed-bottom navbar-pages-project">
+    <p class="navbar-text pull-right" style="margin-right: 15px">
+        Copyrights@2016
+    </p>
+</nav>
+
+</div>
+</div>
+
+<script src="js/jquery.js"></script>
+
+
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
